@@ -1,4 +1,5 @@
-import { Center, HStack, Heading, Icon, Image, Pressable, Text, VStack } from "native-base";
+import { useNavigation } from '@react-navigation/native'
+import { Center, HStack, Heading, Icon, Image, Pressable, Text, VStack, ScrollView } from "native-base";
 import { Feather } from '@expo/vector-icons'
 import { useForm, Controller } from 'react-hook-form'
 
@@ -19,8 +20,14 @@ export function SignUp(){
     console.log(data)
   }
 
+  const navigation = useNavigation();
+
+  function handleGoBack(){
+    navigation.goBack();
+  }
+
   return(
-    <VStack flex={1} bg='base.700' >
+    <ScrollView flex={1} bg='base.700' >
       <VStack   borderBottomLeftRadius={24} borderBottomRightRadius={24} mx={12}>
       <Center mt={12}>
         <LogoSvg />
@@ -142,9 +149,10 @@ export function SignUp(){
             title="Ir para login"
             variant='black'
             bg='base.500'
+            onPress={handleGoBack}
           />
         </Center>
       </VStack>
-    </VStack>
+    </ScrollView>
   )
 }

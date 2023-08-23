@@ -4,8 +4,7 @@ import { useFonts, Karla_400Regular, Karla_700Bold } from '@expo-google-fonts/ka
 
 import { THEME } from './src/theme';
 import { Loading } from '@components/Loading';
-import { SignIn } from '@screens/Sigin';
-import { SignUp } from '@screens/SignUp';
+import { Routes } from '@routes/index';
 
 
 
@@ -23,7 +22,7 @@ export default function App() {
         backgroundColor='transparent'
         translucent
       />
-      {fontsLoaded ? <SignUp/> : <Loading/> }
+      {fontsLoaded ? <Routes/> : <Loading/> }
     </NativeBaseProvider>
   );
 }
