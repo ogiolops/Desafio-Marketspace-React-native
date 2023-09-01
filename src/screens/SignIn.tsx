@@ -74,6 +74,7 @@ export function SignIn(){
             bg={"blue.400"}
             mt={8}
             mb={16}
+            width='full'
             onPress={handleSubmit(handleSignIn)}
           />
         </Center>
@@ -87,6 +88,7 @@ export function SignIn(){
               title="Criar uma conta"
               variant='black'
               bg='base.500'
+              width='full'
               onPress={handleNewAccount}
             />
         </Center>

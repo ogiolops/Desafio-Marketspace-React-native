@@ -128,7 +128,8 @@ export function SignUp(){
           InputRightElement={ 
             <Pressable  onPress={() => setShow(!show)} justifyContent='center' alignItems='center' mr={3} > 
               <Icon as={<Feather name={show ? 'eye' : 'eye-off'} />} size="md" m={2} _light={{color: "gray.300"}}/>
-            </Pressable >} 
+            </Pressable >
+            } 
           />
         )}
       />
@@ -136,19 +137,22 @@ export function SignUp(){
       <Button
         title="Criar"
         bg={"black"}
+        width='full'
+        mt={6}
         onPress={handleSubmit(handleSignUp)}
       />
 
       </Center>
       </VStack>
 
-      <VStack flex={1} justifyContent='center' >
+      <VStack flex={1} justifyContent='center' mt={7} >
         <Center mx={12}>
           <Text pb={2}>Já tem uma conta?</Text>
           <Button 
             title="Ir para login"
             variant='black'
             bg='base.500'
+            width='full'
             onPress={handleGoBack}
           />
         </Center>

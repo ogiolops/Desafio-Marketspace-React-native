@@ -1,14 +1,14 @@
 import { Button as ButtonNativeBase, IButtonProps, Text } from 'native-base'
+import { Icon } from './Icon';
 
 type Props = IButtonProps & {
   title: string;
   variant?: 'black'| 'white';
 }
 
-export function Button({title, variant='white', ...rest }: Props){
+export function Button({title, variant='white',  ...rest }: Props){
   return(
     <ButtonNativeBase 
-      w='full'
       h={12}
       {...rest} 
     >

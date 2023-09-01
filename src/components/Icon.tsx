@@ -1,13 +1,19 @@
 import { Icon as IconNativeBase, IIconProps } from 'native-base'
-import { Feather } from '@expo/vector-icons'
+import { Feather } from '@expo/vector-icons';
 
-export function Icon(){
+type Props =  IIconProps & {
+  name: string;
+  color: string;
+}
+
+export function Icon({name, color, ...rest}: Props){
   return(
     <IconNativeBase 
       as={Feather}
-      name="eye"
-      size={7}
-      color='#000'
+      name={name}
+      size={4}
+      color={color}
+      {...rest}
   />
   )
 }
